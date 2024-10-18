@@ -37,6 +37,8 @@ antlr4 -Dlanguage=Python3 -visitor Laplace.g4
 2. Ejecuta el programa en Python:
 
 ```bash
-	python main.py
+python main.py archivo.txt
 ```
+
+Como se puede notar funciona de la misma forma que los demàs.
 
