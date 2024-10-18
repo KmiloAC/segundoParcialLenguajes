@@ -11,32 +11,42 @@ Es recomendable crear un entorno virtual para gestionar las dependencias del pro
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # En Linux
+source venv/bin/activate 
 ```
 
 Una vez activado el entorno virtual, instala las dependencias necesarias:
 
 ```
-     pip install antlr4-python3-runtime
+pip install antlr4-python3-runtime
 ```
 
 ## Uso
 
+### Aclaración
+
+En mi caso primero tuve que crear el entorno virtual como mostre anteriormente, lo que es recomendable, para entrar a este en mi caso se hace de la siguiente manera:
+
+```bash
+source ~/myenvs/myenv/bin/activate
+```
+
 1. Genera el lexer y parser usando ANTLR:
 
 ```bash
-	antlr4 -Dlanguage=Python3 -visitor RationalExpr.g4
+antlr4 -Dlanguage=Python3 -visitor RationalExpr.g4
 ```
 Esto generará los archivos necesarios para tu lexer y parser.
 
 2. Ejecuta el programa en Python:
 
+
 ```bash
-	python main.py
+python main.py entrada1.txt
 ```
 
-Y aqui ya puedes ingresar las expresiones. Al iniciar el programa nos mostrara un ejemplo de una expresion que puede funcionar.
+Y aqui ya puedes ingresar las expresiones. Al iniciar el programa nos mostrara un ejemplo de una expresion que puede funcionar. Como de igual manera puedes ver otras en el archivo de texto
 
 ```
-	(6/3 + 2/3)
+(6/3 + 2/3)
 ```
+

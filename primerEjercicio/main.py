@@ -71,7 +71,18 @@ class EvalVisitor(RationalExprVisitor):
             print("Error: No se puede crear una fracción con denominador cero.")
             return None
 
-# Función que procesa la entrada del usuario
+# Función que procesa la entrada del usuario desde un archivo
+def procesarArchivoEntrada(input_file):
+    with open(input_file, 'r') as file:
+        for line in file:
+            expresion = line.strip()
+            if expresion:  # Solo procesa líneas no vacías
+                print(f"Evaluando expresión: {expresion}")
+                resultado = analizarYEvaluarExpresion(expresion)
+                if resultado is not None:
+                    print(f"= {resultado}")
+
+# Función que procesa la entrada del usuario desde el input estándar
 def procesarEntradaUsuario():
     while True:
         try:
@@ -93,7 +104,7 @@ def procesarEntradaUsuario():
         except Exception as e:
             print(f"Error detectado: {e}")
 
-# Función que analiza y evalúa la expresión ingresada por el usuario
+# Función que analiza y evalúa la expresión ingresada
 def analizarYEvaluarExpresion(expresion):
     # Convierte la expresión en un flujo de entrada para ANTLR
     input_stream = InputStream(expresion)
@@ -112,4 +123,10 @@ def analizarYEvaluarExpresion(expresion):
 
 # Punto de entrada del programa
 if __name__ == '__main__':
-    procesarEntradaUsuario()
+    import sys
+    
+    if len(sys.argv) > 1:
+        input_file = sys.argv[1]
+        procesarArchivoEntrada(input_file)  # Procesa el archivo de entrada
+    else:
+        procesarEntradaUsuario()  # Procesa la entrada del usuario
