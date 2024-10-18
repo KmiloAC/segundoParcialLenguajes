@@ -44,7 +44,7 @@ Esto generará los archivos necesarios para tu lexer y parser.
 python main.py entrada1.txt
 ```
 
-Y aqui ya puedes ingresar las expresiones. Al iniciar el programa nos mostrara un ejemplo de una expresion que puede funcionar. Como de igual manera puedes ver otras en el archivo de texto
+Y podras ingresar tus propias operaciones o testear distintas situaciones con un archivo.txt. Al iniciar el programa nos mostrara un ejemplo de una expresion que puede funcionar. Como de igual manera puedes ver otras en el archivo de texto
 
 ```
 (6/3 + 2/3)
