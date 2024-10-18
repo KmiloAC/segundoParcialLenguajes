@@ -1,0 +1,5 @@
+MAP(lambda x: x * 2, [1, 2, 3])
+FILTER(lambda x: x > 2, [1, 2, 3, 4])
+MAP    (   lambda x: x + 1, [  1, 2, 3] )  
+MAP(lambda x: x + 2, {1, 2, 3}) 
+MAP(lambda x: x / 0, [1, 2, 3])  
