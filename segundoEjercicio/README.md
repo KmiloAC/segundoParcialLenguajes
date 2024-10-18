@@ -23,5 +23,5 @@ antlr4 -Dlanguage=Python3 -visitor IterableFunctions.g4
 2. Llama al programa y el archivo de entrada, que usted puede modificar o crear uno nuevo y lo llama dentro de la consola:
 
 ```bash
-	python main.py entrada1.txt
+python main.py entrada1.txt
 ```
