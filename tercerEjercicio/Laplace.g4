@@ -31,13 +31,19 @@ additiveExpression
 
 // Expresiones multiplicativas
 multiplicativeExpression 
-    : primaryExpression (('*' | '/') primaryExpression)* 
+    : powerExpression (('*' | '/') powerExpression)* 
+    ;
+
+// Expresiones con potencias
+powerExpression 
+    : primaryExpression ('^' primaryExpression)? 
     ;
 
 // Expresión primaria
 primaryExpression
     : NUMBER 
     | IDENTIFIER 
+    | '-' primaryExpression  // Manejo de números negativos
     | '(' expression ')' 
     | functionCall 
     ;
@@ -48,6 +54,6 @@ functionCall
     ;
 
 // Tokens
-NUMBER : [0-9]+ ;
+NUMBER : '-'? [0-9]+ ('.' [0-9]+)? ;
 IDENTIFIER : [a-zA-Z_][a-zA-Z_0-9]* ;
 WS : [ \t\r\n]+ -> skip ;

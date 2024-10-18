@@ -1,4 +1,3 @@
-f(t) := exp(-2*t);
-g(t) := sin(t);
+f(t) := t^2 + 3*t;
+g(t) := t*exp(-2*t);
 L(f, s);
-L(g, s);

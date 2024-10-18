@@ -71,6 +71,15 @@ class LaplaceListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by LaplaceParser#powerExpression.
+    def enterPowerExpression(self, ctx:LaplaceParser.PowerExpressionContext):
+        pass
+
+    # Exit a parse tree produced by LaplaceParser#powerExpression.
+    def exitPowerExpression(self, ctx:LaplaceParser.PowerExpressionContext):
+        pass
+
+
     # Enter a parse tree produced by LaplaceParser#primaryExpression.
     def enterPrimaryExpression(self, ctx:LaplaceParser.PrimaryExpressionContext):
         pass
